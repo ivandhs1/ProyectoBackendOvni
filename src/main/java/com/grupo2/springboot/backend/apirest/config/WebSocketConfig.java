@@ -19,7 +19,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer{
 	  @Override
 	  public void registerStompEndpoints(StompEndpointRegistry registry) {
 		  registry.addEndpoint("/alerta-back")
-		  .setAllowedOrigins("http://localhost:4200")
+		  .setAllowedOrigins("http://localhost:4200","https://proyectoovnivinosfront.pages.dev")
 		  .withSockJS();
 	  }
 }
