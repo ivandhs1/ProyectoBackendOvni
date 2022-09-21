@@ -104,7 +104,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 						"/apiInventario/InvenarioDetallesId/**",
 						"/apiInventario/InvenarioGeneralProducto/**",
 						"/apiInventario/inventarioGeneralCompleto/cantidad",
-						"/apiInventario/inventarioGeneralCompleto/positvoFiltradoNombre/**",
 						"/inventarioGeneralCompleto/destacado",
 						"/apiProd/productos",
 						"/apiProd/producto/**",
