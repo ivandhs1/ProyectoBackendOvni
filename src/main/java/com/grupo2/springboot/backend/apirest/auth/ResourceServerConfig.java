@@ -36,11 +36,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 				"/topic/alerta",
 				"/app/alerta",
 				"/apiVenta/factura/**",
-				"/apiAdmin/usuario/**",
-				"/apiProd/productoNombre/**",
-				"/apiProd/producto/estado",
-				"/apiProd/producto/estadoFiltro/**",
-				"/inventarioGeneralCompleto/destacado")
+				"/apiAdmin/usuario/**")
 				.permitAll()
 
 				.antMatchers(HttpMethod.POST,
@@ -108,8 +104,13 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 						"/apiInventario/InvenarioDetallesId/**",
 						"/apiInventario/InvenarioGeneralProducto/**",
 						"/apiInventario/inventarioGeneralCompleto/cantidad",
+						"/apiInventario/inventarioGeneralCompleto/positvoFiltradoNombre/**",
+						"/inventarioGeneralCompleto/destacado",
 						"/apiProd/productos",
 						"/apiProd/producto/**",
+						"/apiProd/productoNombre/**",
+						"/apiProd/producto/estado",
+						"/apiProd/producto/estadoFiltro/**",
 						"/apiVenta/ventas",
 						"/apiVenta/venta/**")
 				.hasAnyRole("ADMIN")
@@ -145,8 +146,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(Arrays.asList("https://proyectoovnivinosfront.pages.dev", "**",
-				"http://localhost:4200", "http://localhost:8090", "http://localhost:8089"));
+		config.setAllowedOrigins(
+				Arrays.asList("http://localhost:4200", "**", "http://localhost:8090", "http://localhost:8089"));
 		config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		config.setAllowCredentials(true);
 		config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
