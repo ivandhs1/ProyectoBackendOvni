@@ -25,7 +25,7 @@ public class EnvioCorreoImpl implements IEnviosCorreo {
 		String subject = "Compra ovnivinos";
 		String body = "Hola " + cliente.getNombreCliente() + " " + cliente.getApellidoCliente()
 				+ " su compra se realizo con exito \n"
-				+ " para descargar su factura ingrese a http://localhost:8080/apiVenta/factura/"
+				+ " para descargar su factura ingrese a https://ovnivinos.herokuapp.com/apiVenta/factura/"
 				+ venta.getCodigoVenta();
 		// List<File> adjuntos = Collections.singletonList(new File("PATH_TO_FILE"));
 		List<File> adjuntos = null;
