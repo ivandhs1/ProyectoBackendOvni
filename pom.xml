@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.grupo2.springboot.backend.apirest</groupId>
 	<artifactId>OvniVinosAPIRest</artifactId>
+	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>OvniVinosAPIRest</name>
 	<description>Demo project for Spring Boot</description>
